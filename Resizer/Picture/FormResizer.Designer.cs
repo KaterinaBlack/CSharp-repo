@@ -40,15 +40,13 @@
             // 
             // picture
             // 
-            this.picture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picture.ImageLocation = "";
             this.picture.Location = new System.Drawing.Point(7, 0);
             this.picture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(921, 625);
-            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picture.TabIndex = 0;
             this.picture.TabStop = false;
             // 
