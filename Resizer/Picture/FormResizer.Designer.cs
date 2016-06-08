@@ -33,20 +33,9 @@
             this.buttonOpenPicture = new System.Windows.Forms.Button();
             this.textBoxFileName = new System.Windows.Forms.TextBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.checkBoxGreyscale = new System.Windows.Forms.CheckBox();
             this.button_start = new System.Windows.Forms.Button();
-            this.trackBarBrightness = new System.Windows.Forms.TrackBar();
-            this.labelBrightness = new System.Windows.Forms.Label();
-            this.labelContrast = new System.Windows.Forms.Label();
-            this.trackBarContrast = new System.Windows.Forms.TrackBar();
             this.button_save = new System.Windows.Forms.Button();
-            this.comboCorrection = new System.Windows.Forms.ComboBox();
-            this.labelGamma = new System.Windows.Forms.Label();
-            this.trackBarGamma = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarBrightness)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarContrast)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarGamma)).BeginInit();
             this.SuspendLayout();
             // 
             // picture
@@ -93,19 +82,6 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // checkBoxGreyscale
-            // 
-            this.checkBoxGreyscale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBoxGreyscale.AutoSize = true;
-            this.checkBoxGreyscale.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxGreyscale.Location = new System.Drawing.Point(935, 104);
-            this.checkBoxGreyscale.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.checkBoxGreyscale.Name = "checkBoxGreyscale";
-            this.checkBoxGreyscale.Size = new System.Drawing.Size(217, 26);
-            this.checkBoxGreyscale.TabIndex = 3;
-            this.checkBoxGreyscale.Text = "сделать черно-белым";
-            this.checkBoxGreyscale.UseVisualStyleBackColor = true;
-            // 
             // button_start
             // 
             this.button_start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -119,60 +95,6 @@
             this.button_start.Text = "Изменить картинку";
             this.button_start.UseVisualStyleBackColor = false;
             this.button_start.Click += new System.EventHandler(this.button_start_Click);
-            // 
-            // trackBarBrightness
-            // 
-            this.trackBarBrightness.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackBarBrightness.LargeChange = 10;
-            this.trackBarBrightness.Location = new System.Drawing.Point(936, 169);
-            this.trackBarBrightness.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.trackBarBrightness.Maximum = 50;
-            this.trackBarBrightness.Minimum = -50;
-            this.trackBarBrightness.Name = "trackBarBrightness";
-            this.trackBarBrightness.Size = new System.Drawing.Size(235, 69);
-            this.trackBarBrightness.TabIndex = 5;
-            this.trackBarBrightness.TickFrequency = 10;
-            this.trackBarBrightness.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.trackBarBrightness.ValueChanged += new System.EventHandler(this.trackBarBrightness_ValueChanged);
-            // 
-            // labelBrightness
-            // 
-            this.labelBrightness.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelBrightness.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBrightness.Location = new System.Drawing.Point(935, 133);
-            this.labelBrightness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelBrightness.Name = "labelBrightness";
-            this.labelBrightness.Size = new System.Drawing.Size(235, 33);
-            this.labelBrightness.TabIndex = 6;
-            this.labelBrightness.Text = "Яркость:";
-            this.labelBrightness.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelContrast
-            // 
-            this.labelContrast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelContrast.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelContrast.Location = new System.Drawing.Point(940, 225);
-            this.labelContrast.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelContrast.Name = "labelContrast";
-            this.labelContrast.Size = new System.Drawing.Size(235, 33);
-            this.labelContrast.TabIndex = 8;
-            this.labelContrast.Text = "Контрастность:";
-            this.labelContrast.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // trackBarContrast
-            // 
-            this.trackBarContrast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackBarContrast.LargeChange = 10;
-            this.trackBarContrast.Location = new System.Drawing.Point(939, 261);
-            this.trackBarContrast.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.trackBarContrast.Maximum = 50;
-            this.trackBarContrast.Minimum = -50;
-            this.trackBarContrast.Name = "trackBarContrast";
-            this.trackBarContrast.Size = new System.Drawing.Size(235, 69);
-            this.trackBarContrast.TabIndex = 7;
-            this.trackBarContrast.TickFrequency = 10;
-            this.trackBarContrast.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.trackBarContrast.ValueChanged += new System.EventHandler(this.trackBarContrast_ValueChanged);
             // 
             // button_save
             // 
@@ -188,76 +110,23 @@
             this.button_save.UseVisualStyleBackColor = false;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
-            // comboCorrection
-            // 
-            this.comboCorrection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCorrection.FormattingEnabled = true;
-            this.comboCorrection.Items.AddRange(new object[] {
-            "линейная коррекция",
-            "синусоидальная ",
-            "экспоненциальная",
-            "логарифмическая"});
-            this.comboCorrection.Location = new System.Drawing.Point(936, 336);
-            this.comboCorrection.Name = "comboCorrection";
-            this.comboCorrection.Size = new System.Drawing.Size(235, 30);
-            this.comboCorrection.TabIndex = 10;
-            // 
-            // labelGamma
-            // 
-            this.labelGamma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelGamma.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGamma.Location = new System.Drawing.Point(936, 382);
-            this.labelGamma.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelGamma.Name = "labelGamma";
-            this.labelGamma.Size = new System.Drawing.Size(235, 33);
-            this.labelGamma.TabIndex = 12;
-            this.labelGamma.Text = "Гамма коррекция:";
-            this.labelGamma.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // trackBarGamma
-            // 
-            this.trackBarGamma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackBarGamma.LargeChange = 10;
-            this.trackBarGamma.Location = new System.Drawing.Point(935, 418);
-            this.trackBarGamma.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.trackBarGamma.Maximum = 190;
-            this.trackBarGamma.Minimum = 10;
-            this.trackBarGamma.Name = "trackBarGamma";
-            this.trackBarGamma.Size = new System.Drawing.Size(235, 69);
-            this.trackBarGamma.TabIndex = 11;
-            this.trackBarGamma.TickFrequency = 10;
-            this.trackBarGamma.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.trackBarGamma.Value = 100;
-            this.trackBarGamma.ValueChanged += new System.EventHandler(this.trackBarGamma_ValueChanged);
-            // 
-            // FormPicture
+            // FormResizer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 628);
-            this.Controls.Add(this.labelGamma);
-            this.Controls.Add(this.trackBarGamma);
-            this.Controls.Add(this.comboCorrection);
             this.Controls.Add(this.button_save);
-            this.Controls.Add(this.labelContrast);
-            this.Controls.Add(this.trackBarContrast);
-            this.Controls.Add(this.labelBrightness);
-            this.Controls.Add(this.trackBarBrightness);
             this.Controls.Add(this.button_start);
-            this.Controls.Add(this.checkBoxGreyscale);
             this.Controls.Add(this.textBoxFileName);
             this.Controls.Add(this.buttonOpenPicture);
             this.Controls.Add(this.picture);
             this.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "FormPicture";
+            this.Name = "FormResizer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Попиксельная обработка изображений";
+            this.Text = "Изменение размера изображений";
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarBrightness)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarContrast)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarGamma)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,16 +138,8 @@
         private System.Windows.Forms.Button buttonOpenPicture;
         private System.Windows.Forms.TextBox textBoxFileName;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.CheckBox checkBoxGreyscale;
         private System.Windows.Forms.Button button_start;
-        private System.Windows.Forms.TrackBar trackBarBrightness;
-        private System.Windows.Forms.Label labelBrightness;
-        private System.Windows.Forms.Label labelContrast;
-        private System.Windows.Forms.TrackBar trackBarContrast;
         private System.Windows.Forms.Button button_save;
-        private System.Windows.Forms.ComboBox comboCorrection;
-        private System.Windows.Forms.Label labelGamma;
-        private System.Windows.Forms.TrackBar trackBarGamma;
     }
 }
 
