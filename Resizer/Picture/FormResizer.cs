@@ -4,13 +4,13 @@ using System.Windows.Forms;
 
 namespace Resizer
 {
-    public partial class FormPicture : Form
+    public partial class FormResizer : Form
     {
         Bitmap bmp;
         Bitmap result;
         string text_brightness, text_contrast, text_gamma;
 
-        public FormPicture()
+        public FormResizer()
         {
             InitializeComponent();
             text_brightness = labelBrightness.Text;

@@ -1,6 +1,6 @@
 ﻿namespace Resizer
 {
-    partial class FormPicture
+    partial class FormResizer
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPicture));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormResizer));
             this.picture = new System.Windows.Forms.PictureBox();
             this.buttonOpenPicture = new System.Windows.Forms.Button();
             this.textBoxFileName = new System.Windows.Forms.TextBox();

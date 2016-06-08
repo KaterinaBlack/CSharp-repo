@@ -16,7 +16,7 @@ namespace Resizer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPicture());
+            Application.Run(new FormResizer());
         }
     }
 }
