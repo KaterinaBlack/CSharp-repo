@@ -37,6 +37,8 @@
             this.button_save = new System.Windows.Forms.Button();
             this.trackBarScale = new System.Windows.Forms.TrackBar();
             this.labelScale = new System.Windows.Forms.Label();
+            this.comboBoxMethod = new System.Windows.Forms.ComboBox();
+            this.labelMethod = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarScale)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +90,7 @@
             // 
             // button_start
             // 
-            this.button_start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_start.BackColor = System.Drawing.Color.Yellow;
             this.button_start.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_start.Location = new System.Drawing.Point(595, 279);
@@ -102,7 +104,7 @@
             // 
             // button_save
             // 
-            this.button_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_save.BackColor = System.Drawing.Color.Gold;
             this.button_save.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_save.Location = new System.Drawing.Point(596, 336);
@@ -116,6 +118,7 @@
             // 
             // trackBarScale
             // 
+            this.trackBarScale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.trackBarScale.LargeChange = 10;
             this.trackBarScale.Location = new System.Drawing.Point(596, 142);
             this.trackBarScale.Maximum = 190;
@@ -130,6 +133,7 @@
             // 
             // labelScale
             // 
+            this.labelScale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelScale.Location = new System.Drawing.Point(595, 97);
             this.labelScale.Name = "labelScale";
             this.labelScale.Size = new System.Drawing.Size(230, 33);
@@ -137,11 +141,36 @@
             this.labelScale.Text = "Масштаб:";
             this.labelScale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // comboBoxMethod
+            // 
+            this.comboBoxMethod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMethod.FormattingEnabled = true;
+            this.comboBoxMethod.Items.AddRange(new object[] {
+            "Метод ближайшего соседа",
+            "Билинейная интерполяция"});
+            this.comboBoxMethod.Location = new System.Drawing.Point(595, 233);
+            this.comboBoxMethod.Name = "comboBoxMethod";
+            this.comboBoxMethod.Size = new System.Drawing.Size(230, 27);
+            this.comboBoxMethod.TabIndex = 12;
+            // 
+            // labelMethod
+            // 
+            this.labelMethod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMethod.Location = new System.Drawing.Point(595, 197);
+            this.labelMethod.Name = "labelMethod";
+            this.labelMethod.Size = new System.Drawing.Size(230, 33);
+            this.labelMethod.TabIndex = 13;
+            this.labelMethod.Text = "Алгоритм:";
+            this.labelMethod.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormResizer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(837, 399);
+            this.Controls.Add(this.labelMethod);
+            this.Controls.Add(this.comboBoxMethod);
             this.Controls.Add(this.labelScale);
             this.Controls.Add(this.trackBarScale);
             this.Controls.Add(this.button_save);
@@ -172,6 +201,8 @@
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.TrackBar trackBarScale;
         private System.Windows.Forms.Label labelScale;
+        private System.Windows.Forms.ComboBox comboBoxMethod;
+        private System.Windows.Forms.Label labelMethod;
     }
 }
 
