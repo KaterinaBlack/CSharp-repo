@@ -8,11 +8,12 @@ namespace Resizer
     {
         Bitmap bmp;
         Bitmap result;
-        string text_brightness, text_contrast, text_gamma;
+        string text_scale;
 
         public FormResizer()
         {
             InitializeComponent();
+            text_scale = labelScale.Text;
             TextChanges();
         }
 
@@ -34,13 +35,27 @@ namespace Resizer
 
         public void ChangePicture()
         {
-            result = new Bitmap(bmp);
-            for (int y = 0; y <bmp.Height; y++)
-                for (int x = 0; x < bmp.Width; x++)
+            float coeff = trackBarScale.Value/100.0f;
+            int oldWidth = bmp.Width;
+            int oldHeight = bmp.Height;
+            int newWidth = Convert.ToInt16(oldWidth *coeff);
+            int newHeight = Convert.ToInt16(oldHeight * coeff);
+
+            float coWidth = (float)(oldWidth - 1) / (float)(newWidth - 1);
+            float coHeight = (float)(oldHeight - 1) / (float)(newHeight - 1);
+
+            result = new Bitmap(newWidth,newHeight);
+            int x0, y0;
+            for (int y = 0; y < newHeight; y++)
+            {
+                y0 = Convert.ToInt16(y * coHeight);
+                for (int x = 0; x < newWidth; x++)
                 {
-                    Color pixel = bmp.GetPixel(x, y);
+                    x0 = Convert.ToInt16(x * coWidth);
+                    Color pixel = bmp.GetPixel(x0, y0);
                     result.SetPixel(x, y, pixel);
                 }
+            }
             picture.Image = result;
         }
       
@@ -57,8 +72,10 @@ namespace Resizer
             ChangePicture();
         }
 
-        
-
+        private void trackBarScale_Scroll(object sender, EventArgs e)
+        {
+            TextChanges();
+        }
 
         private void button_save_Click(object sender, EventArgs e)
         {
@@ -88,7 +105,7 @@ namespace Resizer
 
         private void TextChanges()
         {
-            
+            labelScale.Text = text_scale + " " + trackBarScale.Value.ToString() + "%";
         }
     }
 }
