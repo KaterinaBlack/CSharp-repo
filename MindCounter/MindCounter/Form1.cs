@@ -23,6 +23,7 @@ namespace MindCounter
         public Form1()
         {
             InitializeComponent();
+            textMax.Text = max.ToString();
         }
 
         private void buttonPlus_Click(object sender, EventArgs e)
@@ -41,10 +42,20 @@ namespace MindCounter
             labelTask.Enabled = true;
             textBoxAnswer.Enabled = true;
             textBoxAnswer.Text = "";
+            textBoxAnswer.Focus();
             progress.Minimum = 0;
             progress.Maximum = count_max;
             progress.Value = 0;
             count = 0;
+            try
+            {
+                max = Convert.ToInt16(textMax.Text);
+            }
+            catch
+            {
+                max = 10;
+                textMax.Text = max.ToString();
+            }
             Think();
 
         }
@@ -54,8 +65,32 @@ namespace MindCounter
             int a, b;
             a = rnd.Next(min, max + 1);
             b = rnd.Next(min, max + 1);
-            labelTask.Text = a.ToString() + " + " + b.ToString() + " = ";
-            result = (a + b).ToString();
+            if (mode == "plus")
+            {
+                labelTask.Text = a.ToString() + " + " + b.ToString() + " = ";
+                result = (a + b).ToString();
+            }
+            if(mode == "minus")
+            {
+                if(a < b)
+                {
+                    int x = a;
+                    a = b;
+                    b = x;
+                }
+                labelTask.Text = a.ToString() + " - " + b.ToString() + " = ";
+                result = (a - b).ToString();
+            }
+            if(mode == "mult")
+            {
+                labelTask.Text = a.ToString() + " × " + b.ToString() + " = ";
+                result = (a * b).ToString();
+            }
+            if(mode =="divs")
+            {
+                labelTask.Text = (a*b).ToString() + " : " + b.ToString() + " = ";
+                result = (a).ToString();
+            }
             count++;
         }
 

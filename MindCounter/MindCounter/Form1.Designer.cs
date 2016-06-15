@@ -36,26 +36,29 @@
             this.buttonMinus = new System.Windows.Forms.Button();
             this.buttonMult = new System.Windows.Forms.Button();
             this.buttonDivs = new System.Windows.Forms.Button();
+            this.textMax = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelTask
             // 
             this.labelTask.BackColor = System.Drawing.Color.White;
             this.labelTask.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelTask.Enabled = false;
             this.labelTask.Font = new System.Drawing.Font("Verdana", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTask.Location = new System.Drawing.Point(12, 9);
+            this.labelTask.Location = new System.Drawing.Point(12, 3);
             this.labelTask.Name = "labelTask";
-            this.labelTask.Size = new System.Drawing.Size(470, 124);
+            this.labelTask.Size = new System.Drawing.Size(500, 124);
             this.labelTask.TabIndex = 0;
             this.labelTask.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // textBoxAnswer
             // 
             this.textBoxAnswer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxAnswer.Enabled = false;
             this.textBoxAnswer.Font = new System.Drawing.Font("Verdana", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxAnswer.Location = new System.Drawing.Point(488, 8);
+            this.textBoxAnswer.Location = new System.Drawing.Point(518, 3);
             this.textBoxAnswer.Name = "textBoxAnswer";
-            this.textBoxAnswer.Size = new System.Drawing.Size(272, 124);
+            this.textBoxAnswer.Size = new System.Drawing.Size(376, 124);
             this.textBoxAnswer.TabIndex = 1;
             this.textBoxAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxAnswer_KeyDown);
             // 
@@ -64,7 +67,7 @@
             this.buttonPlus.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonPlus.Location = new System.Drawing.Point(12, 164);
             this.buttonPlus.Name = "buttonPlus";
-            this.buttonPlus.Size = new System.Drawing.Size(181, 75);
+            this.buttonPlus.Size = new System.Drawing.Size(181, 63);
             this.buttonPlus.TabIndex = 2;
             this.buttonPlus.Text = "Сложение";
             this.buttonPlus.UseVisualStyleBackColor = true;
@@ -74,7 +77,7 @@
             // 
             this.progress.Location = new System.Drawing.Point(12, 164);
             this.progress.Name = "progress";
-            this.progress.Size = new System.Drawing.Size(748, 75);
+            this.progress.Size = new System.Drawing.Size(748, 63);
             this.progress.TabIndex = 3;
             this.progress.Visible = false;
             // 
@@ -83,7 +86,7 @@
             this.buttonMinus.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonMinus.Location = new System.Drawing.Point(199, 164);
             this.buttonMinus.Name = "buttonMinus";
-            this.buttonMinus.Size = new System.Drawing.Size(181, 75);
+            this.buttonMinus.Size = new System.Drawing.Size(181, 63);
             this.buttonMinus.TabIndex = 4;
             this.buttonMinus.Text = "Вычитание";
             this.buttonMinus.UseVisualStyleBackColor = true;
@@ -94,7 +97,7 @@
             this.buttonMult.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonMult.Location = new System.Drawing.Point(386, 164);
             this.buttonMult.Name = "buttonMult";
-            this.buttonMult.Size = new System.Drawing.Size(181, 75);
+            this.buttonMult.Size = new System.Drawing.Size(181, 63);
             this.buttonMult.TabIndex = 5;
             this.buttonMult.Text = "Умножение";
             this.buttonMult.UseVisualStyleBackColor = true;
@@ -105,17 +108,26 @@
             this.buttonDivs.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonDivs.Location = new System.Drawing.Point(579, 164);
             this.buttonDivs.Name = "buttonDivs";
-            this.buttonDivs.Size = new System.Drawing.Size(181, 75);
+            this.buttonDivs.Size = new System.Drawing.Size(181, 63);
             this.buttonDivs.TabIndex = 6;
             this.buttonDivs.Text = "Деление";
             this.buttonDivs.UseVisualStyleBackColor = true;
             this.buttonDivs.Click += new System.EventHandler(this.buttonDivs_Click);
             // 
+            // textMax
+            // 
+            this.textMax.Font = new System.Drawing.Font("Verdana", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textMax.Location = new System.Drawing.Point(766, 164);
+            this.textMax.Name = "textMax";
+            this.textMax.Size = new System.Drawing.Size(128, 61);
+            this.textMax.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(773, 278);
+            this.ClientSize = new System.Drawing.Size(902, 238);
+            this.Controls.Add(this.textMax);
             this.Controls.Add(this.buttonDivs);
             this.Controls.Add(this.buttonMult);
             this.Controls.Add(this.buttonMinus);
@@ -143,6 +155,7 @@
         private System.Windows.Forms.Button buttonMinus;
         private System.Windows.Forms.Button buttonMult;
         private System.Windows.Forms.Button buttonDivs;
+        private System.Windows.Forms.TextBox textMax;
     }
 }
 
